@@ -14,7 +14,7 @@ const submitForm = (event) => {
   
   if(email.value !== '' || password.value !== '') {
     formdata.email = email.value;
-    formdata.password = email.value;
+    formdata.password = password.value;
     
     console.log(formdata);
     form.reset();

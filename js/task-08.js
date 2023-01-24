@@ -12,7 +12,7 @@ const submitForm = (event) => {
   if(email.value === '' || password.value === '')
     alert('Всі поля повинні бути заповнені!');
   
-  if(email.value !== '' || password.value !== '') {
+  if(email.value !== '' && password.value !== '') {
     formdata.email = email.value;
     formdata.password = password.value;
     

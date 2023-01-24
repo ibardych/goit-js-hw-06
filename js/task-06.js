@@ -3,8 +3,8 @@ const input = document.querySelector('#validation-input');
 const inputValidation = () => {
   const value = input.value;
   const length = input.dataset.length;
-  
-  if(value.length > length) {
+
+  if(value.length !== Number(length)) {
     input.classList.remove('valid');
     input.classList.add('invalid');
   }else{

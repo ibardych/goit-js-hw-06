@@ -43,9 +43,8 @@
       #boxes div {
         width: 0;
         height: 0;
+        opacity: 0;
         background-color: #fff;
-        transition-property: width, height, background-color, box-shadow;
-        transition: 500ms ease-in-out;
         margin: 2px;
         border-radius: 50%;
         display: flex;
@@ -53,6 +52,30 @@
         justify-content: center;
         text-shadow: 2px 2px 7px rgb(0 0 0 / .7);
       }
+
+      #boxes div.animated {
+        animation: append-animate 500ms ease-in;
+        animation-fill-mode: forwards;
+        /* transition-property: width, height, background-color, box-shadow;
+        transition-duration: 500ms;
+        transition-timing-function: ease-in-out;
+        transition-delay: 100ms; */
+      }
+
+      @keyframes append-animate {
+        from {
+          /* width: 0;
+          height: 0; */
+          opacity: 0;
+        }
+        to {
+          /* width: 0;
+          height: 0; */
+          opacity: 1;	
+        }
+      }
+
+      
     </style>
   </head>
   <body>
